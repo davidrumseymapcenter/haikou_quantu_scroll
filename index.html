@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MapLibre Allmaps</title>
+    <style>
+      html,
+      body,
+      #map {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #opacity-control {
+        position: absolute;
+        bottom: 32px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 14px;
+        border-radius: 8px;
+        font: 13px/1 sans-serif;
+        backdrop-filter: blur(4px);
+      }
+
+      #opacity-slider {
+        width: 140px;
+        accent-color: #fff;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="opacity-control">
+      <label for="opacity-slider">Overlay Opacity</label>
+      <input
+        id="opacity-slider"
+        type="range"
+        min="0"
+        max="1"
+        step="0.01"
+        value="1"
+      />
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
