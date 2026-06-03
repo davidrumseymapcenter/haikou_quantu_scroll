@@ -33,7 +33,11 @@ document.getElementById("opacity-slider").addEventListener("input", (e) => {
 });
 
 document.getElementById("gcp-toggle").addEventListener("change", (e) => {
-  map.setLayoutProperty("gcps", "visibility", e.target.checked ? "visible" : "none");
+  map.setLayoutProperty(
+    "gcps",
+    "visibility",
+    e.target.checked ? "visible" : "none",
+  );
 });
 
 map.addControl(new AttributionControl({ compact: true }));
@@ -71,8 +75,8 @@ map.on("load", () => {
         layout: { visibility: "none" },
         paint: {
           "circle-radius": 6,
-          "circle-color": "#facc15",
-          "circle-stroke-color": "#000",
+          "circle-color": "#22cb8d",
+          "circle-stroke-color": "#fff",
           "circle-stroke-width": 1.5,
         },
       });
